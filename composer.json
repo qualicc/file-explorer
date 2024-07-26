@@ -1,0 +1,15 @@
+{
+    "name": "qualicc/file-explorer",
+    "autoload": {
+        "psr-4": {
+            "Qualicc\\FileExplorer\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Jakub Moszyński",
+            "email": "kontakt@jakubmoszynski.pl"
+        }
+    ],
+    "require": {}
+}
