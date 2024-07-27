@@ -14,8 +14,8 @@ class CodeController
 
     private function getColeList()
     {
-        $json = file_get_contents('code_list.json');
-        $data = json_decode($json);
+        include_once("./code_list.php");
+        $data = $code_list;
 
         return $data;
     }
@@ -23,8 +23,8 @@ class CodeController
     {
         foreach ($list as $one) 
         {
-            if ($one -> code == $code) {
-                return $one -> directory;
+            if ($one['code'] == $code) {
+                return $one['directory'];
             }
         }
         return "empty";
