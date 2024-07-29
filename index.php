@@ -1,3 +1,4 @@
+<?php session_start();?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,9 +15,7 @@
                 <input type="password" name="code" required>
                 <label>Access code</label>
             </div>
-            <?php
-                session_start();
-                
+            <?php                
                 if (isset($_SESSION['error_message'])) {
                     echo "<div class='error-message'>" . $_SESSION['error_message'] . "</div>";
                     // Usunięcie błędu po wyświetleniu
