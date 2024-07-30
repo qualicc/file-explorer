@@ -9,5 +9,5 @@ services:
       - "9999:80"
     volumes:
       - ./:/var/www/html/
-      - ../test:/var/www/html
+      - /@your-files:/var/www/html/files
     restart: always

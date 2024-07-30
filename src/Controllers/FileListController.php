@@ -14,7 +14,7 @@ class FileListController
     private function createFileValueObjects(string $dir): void
     {
         foreach ($this ->getFileList($dir) as $one) {
-            array_push($this -> fileList, new FileValueObject("./$dir/$one",$one));
+            array_push($this -> fileList, new FileValueObject("./files/$dir/$one",$one));
         }
     }
     private function getFileList(string $dir): array
@@ -23,7 +23,7 @@ class FileListController
     }
     private function directoryScan(string $dir): array
     {
-        return scandir("./$dir");
+        return scandir("./files/$dir");
     }
     private function removeDots(array $list): array
     {

@@ -13,6 +13,8 @@ File sharing application with access protection
 
 2 in new folder copy index.php from "one" or "two" directory
 
+3 set path to your files in docker-compose in "@your-files"
+
 [![MIT License](https://img.shields.io/badge/License-MIT-green.svg)](https://choosealicense.com/licenses/mit/)
 
 
