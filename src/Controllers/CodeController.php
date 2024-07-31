@@ -2,7 +2,7 @@
 namespace Qualicc\FileExplorer\Controllers;
 
 use Qualicc\FileExplorer\Controllers\MessageController;
-
+use Qualicc\FileExplorer\Session\Session;
 class CodeController 
 {
     private $code;
@@ -33,7 +33,8 @@ class CodeController
     {
         if ($dir != "empty") 
         {
-            header("Location: list.php?dir=" . $dir);
+            Session::set("dir",$dir);
+            header("Location: list.php");
         }
         else
         {

@@ -5,6 +5,6 @@ class FileListValidator
 {
     public static function validate(string $directory): bool
     {
-        return file_exists("/files" . $directory);
+        return file_exists("./files/" . $directory);
     }
 }

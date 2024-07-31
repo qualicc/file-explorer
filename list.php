@@ -2,8 +2,9 @@
 require __DIR__ . '/vendor/autoload.php';
 
 use Qualicc\FileExplorer\Requests\FileListRequest;
-
-$request = new FileListRequest($_GET['dir']);
+use Qualicc\FileExplorer\Session\Session;
+$directory = Session::get("dir");
+$request = new FileListRequest($directory);
 //print_r($request -> getList());
 ?>
 <!DOCTYPE html>
@@ -11,7 +12,7 @@ $request = new FileListRequest($_GET['dir']);
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><?php echo("File list of " . $_GET['dir']);?></title>
+    <title><?php echo("File list of " . $directory);?></title>
     <link rel="stylesheet" href="/style/style.css">
 </head>
 <body id="lista">
